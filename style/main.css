@@ -1,0 +1,127 @@
+/*
+	File: main.css
+	Purpose: commonly used styles
+*/
+
+body {
+	overflow: hidden;
+	font-family: "Ubuntu";
+}
+
+input {
+	font-family: "Ubuntu";
+}
+
+.title
+{
+	font-size: 1.5em;	
+}
+
+.input_big {
+	background: url(../img/login_input.png);
+	border: none;
+	width: 280px;
+	height: 29px;
+	font-size: 1.1em;
+}
+
+.input_small {
+	background: url(../img/input_small.png);
+	border: none;
+	width: 150px;
+	height: 29px;
+	font-size: 1.1em;
+}
+
+#msg_frame, 
+#warning_frame,
+#window_frame,
+#confirm_frame
+{
+	position: absolute;
+	top: 0px; left: 0px; bottom: 0px; right: 0px;
+	z-index: 15000;
+}
+
+/*
+	Message Box
+*/
+
+.msg_msgBox
+{
+	position: fixed;
+	background-image:url('../img/msgbox.png');
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	width: 350px; height: 200px;
+	top: 50%; margin-top: -150px; left: 50%; margin-left: -150px;
+	text-align: center;
+	color: black;
+}
+
+.msg_message
+{
+	position: absolute;
+	overflow: hidden;
+	font-size: 1.2em;
+	padding: 20px;
+	top: 5px;left: 5px;right: 5px;bottom: 35px;
+}
+
+.msg_message img {
+    position: absolute;
+    width: 30px;
+    left: 155px;
+    bottom: 10px;
+}
+
+.msg_btn
+{
+	position: absolute;
+	bottom: 35px;
+	background-color: rgba(255, 255, 255, 0.0);
+	color: darkblue;
+	border: none;
+	font-size: 1.2em;
+	width: 100px;
+	left: 50%;
+	margin-left: -60px;
+}
+
+
+#popup_wait_img {
+    position: absolute;
+    width: 30px; height: 30px;
+    top: 50%; left: 50%; margin-left: -15px; margin-top: -15px;
+}
+
+.img_lnk
+{
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+}
+
+.valign_inner {
+	position: relative;
+	top: -50%;
+}
+
+#toolbar {
+	text-align: center;
+}
+
+#tooltip {
+    position: fixed;
+    z-index: 20000;
+    padding: 10px;
+    *width: 180px;
+    text-align: center;
+}
+
+#tooltip img {
+    position: absolute;
+    left: 0px; width: 100%;
+    z-index: -10;
+    height: 25px;
+}

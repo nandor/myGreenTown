@@ -1,0 +1,5 @@
+myGreenTown v1.0 by Licker Nandor
+
+To run the game, you need an Apache 2.2 webserver, PHP 5.3 and MySQL 5.x.
+You must create an empty database and import the mygreent_db.sql file.
+The db connection must be configured in include/config.php.

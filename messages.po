@@ -1,0 +1,643 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-06-20 15:47+0300\n"
+"PO-Revision-Date: 2011-06-20 3:54+2\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: include/building.php:62
+msgid "Houses"
+msgstr "Case"
+
+#: include/building.php:63
+msgid "Energy"
+msgstr "Energie"
+
+#: include/building.php:64
+msgid "Economy"
+msgstr "Economie"
+
+#: include/building.php:65
+msgid "Garbage disposal"
+msgstr "Deseuri"
+
+#: include/building.php:66
+msgid "Infrastructure"
+msgstr ""
+
+#: include/building.php:67 include/quest.php:200
+msgid "Leisure"
+msgstr ""
+
+#: include/building.php:74
+msgid "Grassland"
+msgstr ""
+
+#: include/building.php:75
+msgid "Road"
+msgstr ""
+
+#: include/building.php:76
+msgid "Normal House"
+msgstr ""
+
+#: include/building.php:77
+msgid "Flat"
+msgstr ""
+
+#: include/building.php:78
+msgid "Wind turbine"
+msgstr ""
+
+#: include/building.php:79
+msgid "Factory"
+msgstr ""
+
+#: include/building.php:80
+msgid "Warehouse"
+msgstr ""
+
+#: include/building.php:81
+msgid "Garbage Dump"
+msgstr ""
+
+#: include/building.php:82
+msgid "School"
+msgstr ""
+
+#: include/building.php:83
+msgid "Recycling station"
+msgstr ""
+
+#: include/building.php:84
+msgid "Solar panels"
+msgstr ""
+
+#: include/building.php:85
+msgid "Town Hall"
+msgstr ""
+
+#: include/building.php:86
+msgid "Hospital"
+msgstr ""
+
+#: include/building.php:87
+msgid "Police departement"
+msgstr ""
+
+#: include/building.php:88
+msgid "Fire departement"
+msgstr ""
+
+#: include/building.php:89
+msgid "Research Center"
+msgstr ""
+
+#: include/building.php:90
+msgid "Eco House"
+msgstr ""
+
+#: include/building.php:91
+msgid "Park"
+msgstr ""
+
+#: include/building.php:92
+msgid "Water Tank"
+msgstr ""
+
+#: include/building.php:93
+msgid "Water Treatment"
+msgstr ""
+
+#: include/building.php:94 include/tech.class.php:33
+msgid "Thermal power plant"
+msgstr ""
+
+#: include/building.php:95 include/tech.class.php:34
+msgid "Geothermal power plant"
+msgstr ""
+
+#: include/building.php:96 include/tech.class.php:35
+msgid "Nuclear power plant"
+msgstr ""
+
+#: include/building.php:97
+msgid "Restaurant"
+msgstr ""
+
+#: include/building.php:98
+msgid "Museum"
+msgstr ""
+
+#: include/building.php:99
+msgid "Eco Factory"
+msgstr ""
+
+#: include/db.php:3
+msgid "Database connection error!"
+msgstr ""
+
+#: include/db.php:6
+msgid "Database Error!"
+msgstr ""
+
+#: include/quest.php:94
+msgid "Requirements"
+msgstr ""
+
+#: include/quest.php:94
+msgid "Objectives"
+msgstr ""
+
+#: include/quest.php:154
+msgid "Claim"
+msgstr ""
+
+#: include/quest.php:158
+msgid "Complete"
+msgstr ""
+
+#: include/quest.php:172
+msgid "Introduction"
+msgstr ""
+
+#: include/quest.php:172
+msgid ""
+"<p>Welcome to your town! This is the first quest from the game and it will "
+"help you to get started</p><p>First of all, you should build some roads. "
+"They are vital to communication and each building has to have access to a "
+"road.</p><p>Build roads on 5 tiles. You can do this by right-clicking and "
+"selecting the road icon.</p><p>To claim this quest, click on the 'Claim' "
+"button</p>"
+msgstr ""
+
+#: include/quest.php:174
+msgid "Charging the batteries"
+msgstr ""
+
+#: include/quest.php:174
+msgid ""
+"<p>You've got some roads, but there isn't anyone to use them. Build a "
+"windmill to produce electricity, so you can build houses and factories later."
+"</p>"
+msgstr ""
+
+#: include/quest.php:176
+msgid "Filling the tanks"
+msgstr ""
+
+#: include/quest.php:176
+msgid ""
+"<p>Besides energy, you need water. You should build a water tank to supply "
+"your town with water</p>"
+msgstr ""
+
+#: include/quest.php:178
+msgid "Treating the water"
+msgstr ""
+
+#: include/quest.php:178
+msgid ""
+"<p>You should build a water treatement station. Otherwise, nobody will move "
+"into your town because you don't have potable water.</p>"
+msgstr ""
+
+#: include/quest.php:180
+msgid "Moving in"
+msgstr ""
+
+#: include/quest.php:180
+msgid ""
+"<p>Before you can start building your town, you need to set up the "
+"adnimistration of your town. You should build a Town Hall.</p><p>Build a "
+"Town Hall.</p>"
+msgstr ""
+
+#: include/quest.php:182
+msgid "Healthcare"
+msgstr ""
+
+#: include/quest.php:182
+msgid ""
+"<p>People won't move into your town unless you set up the right conditions "
+"for them.</p><p>Build a Hospital to help your town's inhabitants cure of "
+"diseases.</p>"
+msgstr ""
+
+#: include/quest.php:184
+msgid "Catch'em all!"
+msgstr ""
+
+#: include/quest.php:184
+msgid ""
+"<p>Neither the world we live in, nor your town aren't Heaven and people "
+"aren't angels. There are a lot of crimes.</p><p>Build a Police departement "
+"to reduce crimes.</p>"
+msgstr ""
+
+#: include/quest.php:186
+msgid "My house is on fire"
+msgstr ""
+
+#: include/quest.php:186
+msgid ""
+"<p>Now that you solved the crimes problem, there is one more thing to do "
+"before people will start moving in.</p><p>Accidents happen and you have to "
+"be prepared for them.</p><p>Build a fire departement to protect your "
+"builldings from flames!</p>"
+msgstr ""
+
+#: include/quest.php:188
+msgid "Hello world!"
+msgstr ""
+
+#: include/quest.php:188
+msgid ""
+"<p>Your town is ready! You can build houses for your residents!.</p><p>Build "
+"3 houses. If you don't have enough space, try to purchase new lands to "
+"extend yout town.</p>"
+msgstr ""
+
+#: include/quest.php:190
+msgid "Touching the clouds"
+msgstr ""
+
+#: include/quest.php:190
+msgid ""
+"<p>Flats are better than houses when we are talking abuot shelters. A flat "
+"can shelter a lot more people than a normal house.</p><p>Build 2 flats.</p>"
+msgstr ""
+
+#: include/quest.php:192
+msgid "Education"
+msgstr ""
+
+#: include/quest.php:192
+msgid ""
+"<p>Although 9 of 10 teenagers say that they don't like anything related to "
+"school, attending one is very important for education.</p><p>Build a school "
+"for kid's education.</p>"
+msgstr ""
+
+#: include/quest.php:194
+msgid "Starting the production"
+msgstr ""
+
+#: include/quest.php:194
+msgid ""
+"<p>If you didn't notice already, you are losing goods. This is because you "
+"consume, but you don't produce anything. You should build some factories "
+"right now.<p>Build 2 factories. If you'll start losing money, build more "
+"homes!</p>"
+msgstr ""
+
+#: include/quest.php:196
+msgid "Going bigger"
+msgstr ""
+
+#: include/quest.php:196
+msgid ""
+"<p>It seems that you can store only 100 goods, but you need more. You can "
+"expand your storage capacity by building warehouses.</p><p>Build a warehouse."
+"</p>"
+msgstr ""
+
+#: include/quest.php:198
+msgid "Filling up"
+msgstr ""
+
+#: include/quest.php:198
+msgid "<p>Produce 300 goods!</p>"
+msgstr ""
+
+#: include/quest.php:200
+msgid ""
+"<p>Entertainment is important if you want to attract young people to your "
+"town and to convince the inhabitants not to move to another town.</"
+"p><p>Build some parks and a museum!</p>"
+msgstr ""
+
+#: include/quest.php:202
+msgid "Wastes"
+msgstr ""
+
+#: include/quest.php:202
+msgid ""
+"<p>Wastes are deducted directly form your score.</p><p>Build a garbage dump "
+"in order to deposit the waste.</p>"
+msgstr ""
+
+#: include/quest.php:204
+msgid "I'm lovin' it"
+msgstr ""
+
+#: include/quest.php:204
+msgid ""
+"<p>Doubtless, neither you nor your town's inhabitants don't like how "
+"starvation sounds.</p><p>Build a restaurant to feed your people.</p>"
+msgstr ""
+
+#: include/quest.php:206
+msgid "Town development"
+msgstr ""
+
+#: include/quest.php:206
+msgid ""
+"<p>Congratulation for getting this far!</p><p>Now, to get even further with "
+"the development of your town, build a Research center. Scientists who will "
+"work here will develop new sources of energy. Furthermore, you will be able "
+"to upgrade some of your existing buildings and to create others.</p><p>Build "
+"a Research center and enable researching.</p>"
+msgstr ""
+
+#: include/quest.php:208
+msgid "Solar energy"
+msgstr ""
+
+#: include/quest.php:208
+msgid ""
+"<p>As windmills, solar panels produce electricity. Click the 'Research' "
+"button and then research your solar panels.</p><p>Build a solar panel.</p>"
+msgstr ""
+
+#: include/quest.php:210
+msgid "My eco house"
+msgstr ""
+
+#: include/quest.php:210
+msgid ""
+"<p>Eco houses are now available. They consume and they polute less than "
+"normal houses.</p><p>Research and build some.</p>"
+msgstr ""
+
+#: include/quest.php:212
+msgid "Higher production, less pollution"
+msgstr ""
+
+#: include/quest.php:212
+msgid ""
+"<p>Sounds impossible?!</p><p>Eco factories make it possible. They consume "
+"less energy, as using their own, they pollute less and they produce more "
+"than a normal factory.</p><p>Build 5 Eco factories!</p>"
+msgstr ""
+
+#: include/quest.php:214
+msgid "Power plants"
+msgstr ""
+
+#: include/quest.php:214
+msgid ""
+"<p>Nuclear, thermal and geothermal power plants are built to produce energy."
+"</p><p>However, they pollute a lot. They are not recomanded but they are "
+"very useful.</p>"
+msgstr ""
+
+#: include/quest.php:216
+msgid "Upgrades"
+msgstr ""
+
+#: include/quest.php:216
+msgid ""
+"<p>You can upgrade even further some of your buildings. Upgrading them will "
+"lower their wastes and polution and increase the income and population.</"
+"p><p>Upgrade your houses, flats and solar panels to level 2."
+msgstr ""
+
+#: include/quest.php:218
+msgid "IQuest"
+msgstr ""
+
+#: include/quest.php:218
+msgid ""
+"<p>If you read this text you should know that you have succesfully finished "
+"all the quest!</p><p>We would like to congratulate you: Congratulations!! </"
+"p><p>And we would like to thank you for playing: Thank you!!</p><p>But... "
+"once you finished the quests doesn't mean that you finished the game. "
+"Continue to expand your town, continue  to build in order to create the best "
+"green town. You can always check yours and other users' score.</"
+"p><p>Finally, we would like to wish you good luck: GOOD LUCK!!</p><p>P.S."
+"Here is a litle bonus.</p>"
+msgstr ""
+
+#: include/tech.class.php:18
+msgid "Researching"
+msgstr ""
+
+#: include/tech.class.php:18
+msgid "This enables researching"
+msgstr ""
+
+#: include/tech.class.php:19
+msgid "House lvl 2"
+msgstr ""
+
+#: include/tech.class.php:19
+msgid "Upgrade your houses, making them better."
+msgstr ""
+
+#: include/tech.class.php:20
+msgid "House lvl 3"
+msgstr ""
+
+#: include/tech.class.php:20
+msgid "Even better houses"
+msgstr ""
+
+#: include/tech.class.php:21
+msgid "House lvl 4"
+msgstr ""
+
+#: include/tech.class.php:21
+msgid "Your houses will have a smaller impact."
+msgstr ""
+
+#: include/tech.class.php:22
+msgid "House lvl 5"
+msgstr ""
+
+#: include/tech.class.php:22
+msgid "The best houses."
+msgstr ""
+
+#: include/tech.class.php:23 include/tech.class.php:24
+#: include/tech.class.php:25 include/tech.class.php:26
+msgid "Solar panel"
+msgstr ""
+
+#: include/tech.class.php:23 include/tech.class.php:24
+#: include/tech.class.php:25 include/tech.class.php:26
+msgid "A clean source of energy"
+msgstr ""
+
+#: include/tech.class.php:27
+msgid "Flat lvl 2"
+msgstr ""
+
+#: include/tech.class.php:27
+msgid "Upgrade your flats, making them better."
+msgstr ""
+
+#: include/tech.class.php:28
+msgid "Flat lvl 3"
+msgstr ""
+
+#: include/tech.class.php:28
+msgid "Even better flats"
+msgstr ""
+
+#: include/tech.class.php:29
+msgid "Flat lvl 4"
+msgstr ""
+
+#: include/tech.class.php:29
+msgid "Your flats will have a smaller impact."
+msgstr ""
+
+#: include/tech.class.php:30
+msgid "Flat lvl 5"
+msgstr ""
+
+#: include/tech.class.php:30
+msgid "The best flats."
+msgstr ""
+
+#: include/tech.class.php:31
+msgid "Eco house"
+msgstr ""
+
+#: include/tech.class.php:31
+msgid "A house wich usues clean sources of energy."
+msgstr ""
+
+#: include/tech.class.php:32
+msgid "Eco house lvl 2"
+msgstr ""
+
+#: include/tech.class.php:32
+msgid "Upgrade your eco house."
+msgstr ""
+
+#: include/tech.class.php:33 include/tech.class.php:34
+#: include/tech.class.php:35
+msgid "A new source of energy"
+msgstr ""
+
+#: include/town.class.php:275
+msgid "You can't build this yet!"
+msgstr ""
+
+#: include/town.class.php:280
+msgid "You must demolish first!"
+msgstr ""
+
+#: include/town.class.php:287
+msgid "Build limit reached!"
+msgstr ""
+
+#: include/town.class.php:291
+msgid "You don't have enough money!"
+msgstr ""
+
+#: include/town.class.php:295
+msgid "You don't have enough goods!"
+msgstr ""
+
+#: include/town.class.php:303
+msgid "You won't produce enough energy!"
+msgstr ""
+
+#: include/town.class.php:307
+msgid "You won't have enough water!"
+msgstr ""
+
+#: include/town.class.php:311
+msgid "You don't produce enough energy!"
+msgstr ""
+
+#: include/town.class.php:314
+msgid "You don't have enough water!"
+msgstr ""
+
+#: include/town.class.php:334
+msgid "Buildings must be constructed near roads!"
+msgstr ""
+
+#: accmngr.php:13 accmngr.php:184
+msgid "Server error"
+msgstr ""
+
+#: accmngr.php:17
+msgid "Invalid verification text entered!"
+msgstr ""
+
+#: accmngr.php:22 accmngr.php:67
+msgid "Username is already used!"
+msgstr ""
+
+#: accmngr.php:28 accmngr.php:63
+msgid "Invalid username!"
+msgstr ""
+
+#: accmngr.php:51 accmngr.php:84 accmngr.php:116 accmngr.php:142
+msgid "Game error!"
+msgstr ""
+
+#: accmngr.php:55 accmngr.php:88 accmngr.php:126 accmngr.php:146
+msgid "You cannot access this page!"
+msgstr ""
+
+#: accmngr.php:98
+msgid "Invalid password!"
+msgstr ""
+
+#: accmngr.php:122
+msgid "Invalid name!"
+msgstr ""
+
+#: accmngr.php:130
+msgid "You have too many towns!"
+msgstr ""
+
+#: accmngr.php:151
+msgid "You don't own that town!"
+msgstr ""
+
+#: accmngr.php:155
+msgid "You can't delete your last town!"
+msgstr ""
+
+#: accmngr.php:179
+msgid "Invalid command!"
+msgstr ""
+
+#: index.php:52
+msgid "Credits"
+msgstr ""
+
+#: index.php:56
+msgid "Register"
+msgstr ""
+
+#: index.php:60
+msgid "Ranking"
+msgstr ""
+
+#: index.php:64
+msgid "Documentation"
+msgstr ""
+
+#: index.php:68
+msgid "Tutorial"
+msgstr ""

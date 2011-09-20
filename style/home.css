@@ -1,0 +1,283 @@
+/******************************************
+	File: index.css
+	Purpose: style for the main page
+******************************************/
+
+body {
+	background-color: lightblue;
+	overflow: hidden;
+}	
+
+
+#menu {
+	position: absolute;
+	top: 0px; left:0px; right: 0px; bottom: 0px;
+	overflow: auto;
+	z-index: 2000;
+}
+
+.menu_item, .menu_item:hover {
+	position: absolute;
+	text-align: center;
+	overflow: hidden;
+	width:70px;height:70px;top:50%;left: 50%;
+	margin-top: -600px;
+	background-image: url('../img/menu_normal.png');
+}
+
+.menu_item:hover {
+	background-image: url('../img/menu_hover.png');
+}
+
+.menu_item > img {
+	cursor: pointer;
+	position: relative; top: 10px;
+	width: 50px; height: 50px;
+}
+
+#home_title {
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	margin-left: -150px;
+	z-index: 24000;
+}
+
+.menu_title {
+	width: 100%;
+	text-align: center;
+	font-size: 1.3em;
+	margin-bottom: 10px;
+}
+
+/*
+	Login Menu
+*/
+
+#menu_login {
+	background: url('../img/menuPanel.png');
+	position: absolute;
+	margin: 2px;
+	overflow: hidden;
+	width: 210px;
+	height:200px;
+	top:50%;right:50%;margin-top: -100px;
+	text-align: center;
+}
+
+.menu_login_subtitle {
+	width: 100%;
+	text-align: center;
+}
+
+#menu_login_user, #menu_login_pass {
+	width: 100%;
+	margin: 0; border: 0; padding: 0; 
+	height: 25px;
+	font-size: 1.1em;
+	text-align: center;
+	background-color: #2A6303;
+	color: black;
+}
+
+#menu_login_pass {
+	font-family: "Helvetica"
+}
+
+#menu_login_login {
+	margin-top: 5px;
+	width: 70px; height: 30px;
+	font-size: 1.1em;
+}
+
+#menu_login_msg {
+	font-size: 1.1em; font-weight: bold;
+	color: red; padding: 20px;
+}
+
+#menu_login_msg input {
+	position: absolute;
+	left: 50%; width:70px; bottom: 10px; margin-left: -35px;
+	height: 30px;
+	font-size: 1.1em;
+}
+
+/*
+	Town select menu
+*/
+
+#menu_tselect {
+	background: url('../img/menuPanel.png');
+	position: fixed;
+	overflow: hidden;	
+	text-align: center;
+	color: black;margin: 2px;
+	width: 210px;height:200px;top: 50%;margin-top:-100px;left: 50%;
+}
+
+#menu_tselect > p {
+	padding: 5px;
+	text-align: center;
+}
+
+#town_holder {
+	position: absolute;
+	overflow: hidden;
+	left: 5px; right: 5px; top: 50%; height: 160px; margin-top: -60px;
+}
+
+#menu_tselect input {
+	position: absolute;
+	bottom: 0px;
+	width: 100px; left: 50%; margin-left: -50px;
+}
+
+#town_holder img {
+	width: 190px;	
+}
+
+#town_holder a {
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+}
+
+#tscroll {
+	position: relative;
+	z-index: 
+}
+
+#tscroll > div {
+	float: left;
+}
+
+
+#tleft {
+	position: absolute;
+	left: 0px; top: 50%; margin-top: -15px; width: 50px; height: 50px;
+	cursor: pointer;
+	z-index: 1000;
+}
+
+#tright {
+	position: absolute;
+	right: 0px; top: 50%; margin-top: -15px; width: 50px; height: 50px;
+	cursor: pointer;
+	z-index: 1000;
+}
+
+
+/***************************************************************
+    Documentation
+****************************************************************/
+
+.textile {
+	padding: 20px;
+}
+
+#doc_holder {
+    position: relative;
+}
+
+#doc_title {
+    position: absolute;
+    text-align: center;
+    top: 0px; height: 40px; left: 0px; right: 0px;
+    font-weight: bold; font-size: 2em;
+    border-bottom: 2px solid black;
+}
+
+#doc_sidebar {
+    position: absolute;
+    left: 0px; top: 40px; bottom: 0px; width: 200px;
+    border-right: 2px solid black;
+    overflow: auto;
+}
+
+#doc_body {
+    position: absolute;
+    left: 200px; right: 0px; top: 40px; bottom: 0px; 
+    overflow: auto;
+}
+
+#doc_body em {
+    text-decoration: italic;
+}
+
+#doc_sidebar > div {
+    background-color: green;
+    margin: 5px;
+    height: 40px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+
+#gamePreview {
+    position: absolute;
+    left: 50%; top: 50%;
+}
+
+#gamePreview img {
+    position: absolute;
+}
+
+
+#toolbar {
+	position: absolute;
+	height: 60px; left: 0px; right: 0px; top:0px;
+	background-image: url('../img/menuBack.png');
+	background-repeat:repeat-x;
+	z-index: 17000;
+}
+#toolbar_logo {
+	position: absolute;
+	top: 0px; height: 100px; left: 0px; right: 0px;
+	background-image: url('../img/stat-up-toolbar.png');
+	background-repeat:repeat-x;
+	z-index: 17000;
+}
+
+#toolbar > span {
+	font-size: 1.2em;
+}
+
+#toolbar img {
+	height: 45px;
+	cursor: pointer;
+	vertical-align: middle;
+	padding: 5px;
+}
+
+#toolbar_tooltip {
+	padding: 10px;
+	font-size: 1.5em;
+}
+
+#page_ctnt {
+	position: absolute;
+	top: 59px; left: 0px; bottom: 0px; right: 0px;
+	z-index: 25000;
+	overflow: auto;
+	background-color: lightblue;
+}
+
+#register_warning {
+	border: 2px solid #8A0808;
+	background-color: red;
+	width: 500px;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+#ad {
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	margin-left: -319px;
+	z-index: 10000;
+}
+
+.lchg {
+    cursor: pointer;
+}

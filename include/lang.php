@@ -1,0 +1,36 @@
+<?php
+    @session_start ();
+    
+    include 'ro.ntr.php';
+        
+    if (isset ($_GET['lang'])) {
+        $_SESSION['lang'] = $_GET['lang'];
+    }
+    
+    if (!isset ($_SESSION['lang'])) {
+        $_SESSION['lang'] = 'en';
+    }
+    
+    if ($_SESSION['lang'] != 'en' && !array_key_exists ($_SESSION['lang'], $ntr)) {
+        echo "Invalid language!";
+        exit (0);
+    }
+    
+    function do_hash ($string, $h)
+    {
+        $hash = 0;
+        for ($i = 0; $i < strlen ($string); $i++) {
+            $hash = ($hash + ord($string[$i])) % $h;
+        }
+        return $hash;
+    }
+        
+    function _($str) {
+        if ($_SESSION['lang'] == 'en') {
+            return $str;
+        } else {
+            global $ntr;    
+            return ($ntr[$_SESSION['lang']][$str] == '') ? $str : $ntr[$_SESSION['lang']][$str];
+        }
+    }    
+?>

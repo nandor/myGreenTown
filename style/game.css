@@ -1,0 +1,799 @@
+/*
+	File: game.css
+	Purpose: styles for the game
+*/
+
+body {
+	margin: 0;padding:0;width: 100%;
+	background-color: lightblue;
+	overflow: hidden;
+}
+
+html {
+	overflow: hidden;
+}
+
+#tileHolder {
+	position: relative;
+	left: 100px; top: 100px;
+	z-index: 1;
+}
+
+#gamezone , #gamezoneClick{
+	position: absolute;
+	left: 0px; top:0px; bottom: 0px; width: 100%;
+	overflow: hidden;
+	margin: 0px;
+	border-style: none;
+}
+
+#gamezoneClick {
+	background-color: red;
+	opacity: 0.0;
+	filter:alpha(opacity=0);
+	z-index: 8000;
+	bottom: 150px;
+}
+
+#gwait {
+    position: absolute;
+    width: 30px; height: 30px; top: 50%; left: 50%;
+    margin-left: -15px; margin-right: -15px;
+}
+
+.anim {
+	position: absolute;
+	border: none;
+	z-index: 1;
+	bottom: 0px;
+}
+
+.mapTile {
+	position: absolute;
+	border: none;
+	z-index: -1;
+}
+
+.mapTile > div{
+	position: relative;
+	top: -35px;
+	left: 30px;
+	color: white;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.mapTileImg {
+	position: absolute;
+	bottom: 0px;
+	z-index: -1000;
+}
+
+.mapTilePol{
+	position: absolute;
+	bottom: 0px;
+	z-index: 10000000;
+}
+
+#tile_selector {
+	position: absolute;
+	border: none;
+	z-index: 10000000;
+}
+
+/*
+	Game status
+*/
+
+#gameMenu {
+	position: fixed;
+	top: 0px; height: 60px; left: 0px; right: 0px;
+	background-image: url('../img/menuBack.png');
+	background-repeat:repeat-x;
+	z-index: 19000;
+	overflow: hidden;
+}
+
+.gameStatusMargin {
+	float: left;
+	display: block;
+	height: 38px;
+}
+
+#gameStatus {
+	display: inline;
+}
+
+#gameStatus>span {
+	position: relative;
+	top: 7px;margin: 1px;
+	float: left;
+	height: 50px;
+	padding: 5px;
+}
+
+#gameStatus>span>img{
+	position: relative;
+	top: 4px;left: 2px;
+	width: 20px; height: 20px;
+	display: inline;
+}
+
+#gameStatus > span > span {
+	padding: 10px;
+}
+
+#gameControl {
+	position: absolute;
+	right: 0px; height: 60px; width: 405px;
+	background: url('../img/menuBack.png');
+	z-index: 19000;
+}
+
+#gameControl > img {
+    float: right;
+    padding: 5px;
+	width: 35px; height: 35px;
+	cursor: pointer;
+}
+
+.townName {
+	font-size: 1.4em;
+}
+
+#ad {
+    position: relative;
+	float: left;
+}
+
+/***************************************************************************************************
+	Achievement Window
+***************************************************************************************************/
+
+#achiev_window {
+	position: relative;
+	width: 100%; height: 100%;
+}
+
+#achiev_header {
+	position: absolute;
+	left: 0px; right: 0px; height: 50px;
+	font-size: 2em; font-family: Purisa_bold;
+	text-align: center;
+	border-bottom: 1px solid green;
+}
+
+#achiev_footer {
+	position: absolute;
+	left: 0px; right: 0px; bottom: 0px; height: 30px;
+	border-top: 1px solid green;
+	font-size: 0.8em;
+}
+
+#achiev_body {
+	position: absolute;
+	left: 0px; right: 0px; bottom: 30px; top: 50px;
+	overflow: auto;
+}
+
+.achiev_finish, .achiev_unfinish {
+	height: 60px;
+	margin: 2px;
+	border: 2px solid;
+}
+
+.achiev_unfinish {
+	background-color: gray;
+	border-color: darkgray;
+}
+
+.achiev_finish table, .achiev_unfinish table {
+	width: 100%;
+}
+
+
+.achiev_img_frame {
+	border-right: 2px solid rgba(50, 50, 50, 0.5);
+}
+
+.achiev_img_frame img{
+	width: 55px; height: 55px
+}
+
+.achiev_title, .achiev_text{
+	position: absolute;
+	left: 0; right: 0; height: 50%;
+}
+.achiev_title {
+	font-family: Purisa_bold;
+}
+
+.achiev_text {
+	top: 50%;
+}
+
+
+.achiev_finish {
+
+}
+
+.achiev_unfinish {
+}
+
+
+/***************************************************************************************************
+	User Interface
+***************************************************************************************************/
+
+#ui_body {
+    position: absolute;
+	background: url('../img/uiBack.png');
+    left: 0px; right: 0px; bottom: 0px; height: 150px; width: 100%;
+	z-index: 7000;
+}
+
+#ui_panel {
+	position: absolute;
+	left: 0px; width: 260px; bottom: 0px; top: 0px;
+	z-index: 11000;
+}
+
+#ui_building {
+	position: absolute;
+	bottom: 0px; height: 150px; right: 0px; width: 300px;
+	z-index: 11000;
+}
+
+#ui_box {
+	position: absolute;
+	left: 260px; bottom: 0px; height: 141px; right: 300px;
+	overflow: auto;
+	text-align: center;	
+	z-index: 11000;
+}
+
+/*
+	Panel
+*/
+
+#ui_minimap, #ui_town {
+	position: relative;
+	top: 0px; left: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 12000;
+}
+
+#ui_town div {
+	height: 30px;
+}
+
+#ui_town_name img {
+    width: 20px; height: 20px;
+	cursor: pointer;
+}
+
+/*
+	Building
+*/
+
+#ui_bImg {
+	position: absolute;
+	right: 100%; bottom: 100%; width: 80px;
+	margin-bottom: -10px; 
+	margin-right: -30px;
+}
+
+#ui_bName {
+	margin-top: -10px;
+	width: 100%;
+	text-align: center;
+	font-size: 1.3em;
+}
+
+#ui_stats {
+	float: left;
+	width: 50%;
+}
+#ui_stats_more {
+	float: left;
+	width: 50%;
+}
+
+#ui_stats td, #ui_stats_more td {
+	width: 70px;
+	text-align: right;
+	border: 1px solid green;
+}
+
+#ui_stats th, #ui_stats_more th {
+	border: 1px solid green;
+}
+
+
+#ui_stats img, #ui_stats_more img {
+	float: left;
+	width: 20px; height: 20px;
+	vertical-align: middle;
+	padding-right: 3px;
+}
+
+/*
+	Box
+*/
+
+#ui_box_load {
+	position:absolute;
+	top: 50%; margin-top: -30;
+	left: 50%; margin-left: -80;
+}
+
+#ui_box > div > div{
+	position: relative;
+	width: 120px; height: 120px;
+	background: url('../img/bld_back.png');
+	float: left;
+	margin: 2px;
+}
+
+#ui_bld_drag {
+	position: fixed;
+	z-index: 20000;
+	cursor: move;
+	width: 100px;
+}
+
+#ui_box span {
+	position: absolute;
+	top: 10px;
+	left: 0px;
+	width: 100%;
+	height: 25px;
+}
+
+.ui_box_img {
+	position: relative;
+	top: 40px;
+	height: 60px;
+	cursor: pointer;
+}
+
+#ui_minimap_body {
+    position: relative;
+	width: 260px;
+	height: 200px;
+	z-index: 10000;
+}
+
+#ui_minimap_drag {
+	position: absolute;
+	z-index: 8000;
+}
+
+#ui_map {
+	position: absolute;
+	top: 50%; left: 50%;
+	z-index: -5000;
+}
+
+
+.ui_hover {
+	position: absolute;
+	color: black;
+	z-index: 8000;
+	width: 158px;
+	height: 175px;
+	background: url('../img/ui_hover.png');
+	font-size: 0.9em;
+}
+
+.ui_bld_cat_title {
+	font-weight: bold;
+	text-align: left;
+	cursor: pointer;
+	border: 1px solid green;
+	background-color: #00CC00;
+	margin: 1px;
+}
+
+.ui_hover table {
+	width: 100%; height: 100%;
+}
+
+.ui_hover td {
+	width: 50%;
+	padding: 5px;
+	text-align: right;
+	font-size: 1.1em;
+}
+
+.ui_hover img {
+	float: left;
+	width: 20px; height: 20px;
+	vertical-align: middle;
+	padding-right: 3px;
+}
+/***************************************************************************************************
+	ContextMenu
+***************************************************************************************************/
+
+#contextMenu {
+	position: absolute;
+	background-color: #5FB404;
+	border: 3px solid green;
+	height: 35px;
+	z-index: 12000;
+}
+
+#contextMenu img {
+	margin: 2px;
+	height: 30px;
+	cursor: pointer;
+}
+
+/***************************************************************************************************
+	Quest
+***************************************************************************************************/
+
+#quest_body {
+	position: absolute;
+	width:100%;
+	height:100%;
+	text-align: center;
+}
+
+#quest_sidebar {
+	position: absolute;
+	left: 0px; top: 50px; bottom: 0px; width: 170px;
+	border-right: 2px solid green;
+	overflow-x: auto;
+}
+
+#quest_titlebar {
+	position: absolute;
+	left: 0px; right: 0px; top: 0px; height: 50px;
+	font-size: 30px;
+	text-align: center;
+	border-bottom: 2px solid green;
+}
+
+.quest_cat_title {
+	display: block;
+	border-bottom: 1px solid green;
+	border-top: 1px solid green;
+	font-size: 0.8em;
+	background-color: gold;
+}
+
+
+#quest_content {
+	position: absolute;
+	left: 170px; top: 50px; right: 0px; bottom: 0px;
+	text-align: center;
+	overflow-x: auto;
+}
+
+#q_title {
+	font-size: 20px;
+}
+
+#q_desc {
+	text-align: left;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#q_table {
+	width: 100%;
+}
+
+#q_table th {
+	background-color: #gold;
+	width: 47%;
+}
+
+#q_table tr {
+	background-color: #33C633;
+}
+
+#q_table td {
+	text-align: center;
+}
+#q_table img {
+	height: 30px;
+}
+
+#q_reward {
+	width: 100%;
+	font-size: 30px; text-align: center;
+}
+
+.q_avail {
+	cursor: pointer;
+}
+
+#q_claim {
+	width: 100px;
+	height: 30px;
+}
+
+/***************************************************************************************************
+	Profile
+***************************************************************************************************/
+
+#profile_title {
+	position: absolute;
+	text-align: center;
+	font-size: 2em;
+	top: 0px; height: 80px; left: 0px; right: 0px;
+}
+
+
+#profile_sidebar {
+	position: absolute;
+	top: 80px; left: 0px; bottom: 0px; width: 200px;
+}
+
+#profile_body 
+{
+	position: absolute;
+	top: 110px; left: 200px; bottom: 0px; right: 0px;
+	text-align: center;
+}
+
+
+#profile_sidebar > div, #profile_sidebar > div:hover
+{
+	background-color: green;
+	height: 50px; width: 200px;
+	text-align: center;
+	font-size: 1em;  
+	padding-top: 10px;
+	cursor: pointer;
+	margin: 2px;
+}
+
+#profile_sidebar > div:hover 
+{
+	background-color: #339900;
+	cursor: pointer;
+}
+
+#profile_bottombar
+{
+	position:absolute;
+	border: 2px solid red;
+	font-size: large;
+	background-color: green;
+	left:   30%;
+	right:  30%;
+	top:   20%;
+	bottom: 50%;
+}
+
+/***************************************************************************************************
+	Statistics
+***************************************************************************************************/
+
+#stat_summary {
+	width: 100%;
+	height: 100%;
+}
+
+#stat_summary th {
+	width: 400px;
+	background-color: #339900;
+}
+
+#stat_summary td {
+	background-color: #04B404;
+}
+
+#stat_summary td>img {
+	height: 20px;
+	vertical-align: middle;
+	padding: 5px;
+}
+
+#ui_info_panel {
+    position: fixed;
+    right: 0px; top: 60px; width: 600px; height: 0px;
+	background: url('../img/panelBack.jpg');
+	z-index: 11000;
+	overflow: auto;
+}
+
+#profile_warning {
+	position: absolute;
+	left: 220px; top: 80px; right: 0px; height: 30px;
+	color: red;
+	text-align: center;
+}
+
+/************************
+	Towninfo
+************************/
+
+.border {
+	position: relative;
+	float:  left;
+	margin: 10px;
+	width: 100px;
+	height: 100px;
+	background-color: gold;
+}
+
+.border .top, .border .lft, .border .rgt, .border .btm,
+.border .ctl, .border .ctr, .border .cbl, .border .cbr,
+.border .ctnt, .border .back{
+	position: absolute;
+	cursor: pointer;
+}
+
+.border .top {
+	left: 10px; right: 10px; top: 0px; height: 10px;
+	background: url('../img/border/top.png');
+}
+
+.border .lft {
+	left: 0px; top: 10px; bottom: 10px; width: 10px;
+	background: url('../img/border/left.png');
+}
+
+.border .rgt {
+	right: 0px; top: 10px; bottom: 10px; width: 10px;
+	background: url('../img/border/right.png');
+}
+
+.border .btm {
+	left: 10px; right: 10px; bottom: 0px; height: 10px;
+	background: url('../img/border/bottom.png');
+}
+
+.border .ctl {
+	top: 0xp; left: 0px; width: 10px; height: 10px;
+	background: url('../img/border/ctl.png');
+}
+
+.border .cbl {
+	left: 0xp; bottom: 0px; width: 10px; height: 10px;
+	background: url('../img/border/cbl.png');
+}
+.border .ctr {
+	top: 0xp; right: 0px; width: 10px; height: 10px;
+	background: url('../img/border/ctr.png');
+}
+
+.border .cbr {
+	bottom: 0px; right: 0px; width: 10px; height: 10px;
+	background: url('../img/border/cbr.png');
+}
+
+.border .back {
+	top: 20px; left: 20px; bottom: 20px; right: 10px;
+}
+
+.border .back img {
+	width: 60px;
+	height: 60px;
+}
+
+.border .ctnt {
+	top: 35px; left: 10px; bottom: 35px; right: 10px;
+	font-size: 1.4em;
+	font-weight: bold;
+	text-align: center;
+	overflow: hidden;
+}
+
+#stat_slider {
+	position: absolute;
+	top: 10px; left: 0px; right: 0px; height: 120px;
+	overflow: hidden;
+}
+
+#stat_content {
+	position: absolute;
+	top: 150px; left: 10px; right: 10px; bottom: 10px;
+	font-size: 1.2em;
+	overflow: auto;
+}
+
+.stat_hr {
+	position: absolute;
+	top: 135px; left: 0px; right: 0px; height: 10px;
+	background: url('../img/border/bottom.png');
+}
+
+#stat_sliding {
+    position: relative;
+    width: 5000px;
+    left: 50px;
+}
+
+#sleft {
+    position: absolute;
+    left: 0px; height: 50px; top: 35px; z-index: 100;
+    cursor: pointer;
+}
+
+#sright {
+    position: absolute;
+    right: 0px; height: 50px; top: 35px; z-index: 100;
+    cursor: pointer;
+}
+
+/*******************************
+    Mail
+*******************************/
+
+#mail_title {
+    position: absolute;
+    left: 0px; right: 0px; top: 0px; height: 30px;
+    text-align: center;
+    font-size: 25px;
+}
+
+#mail_options {
+    position: absolute;
+    left: 0px; right: 0px; height: 25px; bottom: 0px;
+    text-align: center;
+}
+
+#mail_body, #mail_compose {
+    position: absolute;
+    left: 0px; right: 0px; top: 30px; bottom: 25px;
+    border-top: 2px solid gold;
+    border-bottom: 2px solid gold;
+    overflow: auto;
+}
+
+.mail {
+    position: relative;
+    background-color: rgba(0, 200, 0, 0.7);
+    border: 1px solid black;
+    margin: 1px;
+}
+
+.mail > .title {
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.mail >.title > .from {
+    font-size: 16px;
+}
+
+.mail > .date {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.mail .msg {
+    border-top: 1px solid green;
+    font-family: "Arial";
+    font-size: 14px;
+}
+
+#mail_options input {
+    height: 25px; font-size: 16px;
+}
+
+#txt {
+    width: 100%;
+    height: 100%;
+	font-family: "Tahoma";
+}
+
+#txt_holder {
+    position: absolute;
+    top: 100px; bottom: 0px; left: 2px; right: 2px;
+    overflow: hidden;
+}
+
+#mail_res {
+    color: red;
+    font-size: 25px;
+}

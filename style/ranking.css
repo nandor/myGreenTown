@@ -1,0 +1,66 @@
+#rank_title {
+    position: absolute;
+    left: 0px; width: 0px; top: 0px; height: 40px;
+    font-size: 1.6em;
+    text-align: center;
+    z-index: 1000;
+}
+
+#rank_body {
+    position: absolute;
+    left: 0px; top: 40px; bottom: 0px; width: 300px;
+    z-index: 1000;
+}   
+
+#rank_table th {
+    height: 20px;
+	background-color: #CCFF00;
+}
+
+#rank_table tr {
+    height: 20px;
+	background-color: #99CC33;
+	cursor: pointer;
+}
+
+.curPage {
+    font-size: 30px;
+}
+
+#rank_control {
+    position: absolute;
+    bottom: 0px; left: 0px; right: 0px; height: 50px;
+    text-align: center;
+    background-color: #CCFF00;
+}
+
+#rank_control span {
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#town_body {
+    position: absolute;
+    top: 0px; left: 0px; bottom: 0px; right: 0px;
+    z-index: 0;
+    overflow: hidden;
+}
+
+#rank_town_holder {
+    position: absolute;
+    overflow: visible;
+    top: 0px; left: 0px;
+    z-index: 0;
+}
+
+#rank_town_holder > img {
+	position: absolute;
+	width: 120px;
+}
+
+#rank_wait {
+    position: absolute;
+    height: 40px; width: 40px;
+    top: 50%; left: 50%; margin-top: -10px; margin-left: -10px;
+}
