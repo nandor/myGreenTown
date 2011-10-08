@@ -64,7 +64,7 @@
 		case 'bld':
 		{	
 		    if (!isset ($_GET['x'], $_GET['y'], $_GET['id'], $_SESSION['town'])) {
-		        echo _("Game error!"); exit ();
+		        echo __("Game error!"); exit ();
 		    }
 		    
 			echo $usr->towns[$_SESSION['town']]->build ($_GET['x'], $_GET['y'], intval ($_GET['id']));
@@ -73,11 +73,11 @@
 		case 'renametown':
 		{
 		    if (!isset ($_GET['new'])) {
-		        echo _("Game error!"); exit ();
+		        echo __("Game error!"); exit ();
 		    }
 		    
 		    if (!valid_name ($_GET['new'])) {
-		        echo _("Invalid name!"); exit ();
+		        echo __("Invalid name!"); exit ();
 		    }
 		
 			echo $usr->towns[$_SESSION['town']]->rename (mysql_real_escape_string ($_GET['new']));
@@ -92,7 +92,7 @@
 		case 'getquest':
 		{
 		    if (!isset ($_GET['id'])) {
-		        echo _("Error!"); exit ();
+		        echo __("Error!"); exit ();
             }
 			
 			echo $quests[$_GET['id']]->toHTML ($usr->towns[$_SESSION['town']]);
@@ -106,12 +106,12 @@
 		case 'research':
 		{
 			if (!isset ($_GET['i'])) {
-		        echo _("Game error!");
+		        echo __("Game error!");
 				break;
             }
 			$usr->towns[$_SESSION['town']]->techRes[$_GET['i']] = 1;
 			if($usr->towns[$_SESSION['town']]->fact['budget'] < $techs[$_GET['i']]->cost) {
-				echo _("You don't have enough money");exit ();
+				echo __("You don't have enough money");exit ();
 			}
 			$usr->towns[$_SESSION['town']]->fact['budget'] -= $techs[$_GET['i']]->cost;
 			$usr->towns[$_SESSION['town']]->update ();
@@ -161,7 +161,7 @@
             
             mysql_query ("INSERT INTO mail(`from`, `to`, `title`, `text`) VALUES('$from', '{$rcpt['id']}', '{$_POST['title']}', '{$_POST['txt']}');");
             
-            echo "<span style = 'color:green'>"._("Message sent!")."</span>";
+            echo "<span style = 'color:green'>".__("Message sent!")."</span>";
             
             break;
         }

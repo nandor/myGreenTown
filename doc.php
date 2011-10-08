@@ -5,11 +5,11 @@
 	include 'include/usr.class.php';
 ?>
 <div>
-    <div id = "doc_title"><?php echo _("Documentation"); ?> </div>
+    <div id = "doc_title"><?php echo __("Documentation"); ?> </div>
     <div id = "doc_sidebar">
-		<div page = 'about.tex'><?php echo _("About the game"); ?></div>
-		<div page = 'tutorial.tex'><?php echo _("Tutorial"); ?></div>
-		<div page = 'stats.tex'><?php echo _("Building stats"); ?></div>
+		<div page = 'about.tex'><?php echo __("About the game"); ?></div>
+		<div page = 'tutorial.tex'><?php echo __("Tutorial"); ?></div>
+		<div page = 'stats.tex'><?php echo __("Building stats"); ?></div>
 	</div>
     <div id = "doc_body">
     <?php

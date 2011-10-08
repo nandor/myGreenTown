@@ -83,103 +83,103 @@
 
 <div id = "stat_content">
 	<div id = "stat_score">
-	    <span class = 'title'><?php echo _("Score"); ?></span><hr />
-	    <?php echo _("The score shows how good your town is. It is affected by the score given by the buildings and some other factors."); ?>
+	    <span class = 'title'><?php echo __("Score"); ?></span><hr />
+	    <?php echo __("The score shows how good your town is. It is affected by the score given by the buildings and some other factors."); ?>
 	    <table id = "stat_summary">
 	        <tr>
-	            <th><?php echo _("Base Score"); ?></th>
+	            <th><?php echo __("Base Score"); ?></th>
 	            <td><? echo $town->scoreBase ?></td>
 	        </tr>
 	        <tr>
-	            <th><?php echo _("Pollution"); ?></th>
+	            <th><?php echo __("Pollution"); ?></th>
 	            <td><? echo $town->scorePol ?>%</td>
 	        </tr>
 	        <tr>
-	            <th><?php echo _("Waste"); ?></th>
+	            <th><?php echo __("Waste"); ?></th>
 	            <td><? echo $town->scoreWaste ?></td>
 	        </tr>
 	        <tr>
-	            <th><?php echo _("Green Areas"); ?></th>
+	            <th><?php echo __("Green Areas"); ?></th>
 	            <td><? echo $town->scoreGreen ?>%</td>
 	        </tr>
 	    </table>
 	</div>
 	<div id = "stat_pol">
-	    <span class = 'title'><? echo _("Pollution"); ?></span><hr />
-	    <?php echo _("This number indicates how polluted your town is. It's the average of the pollution of every building."); ?>
+	    <span class = 'title'><? echo __("Pollution"); ?></span><hr />
+	    <?php echo __("This number indicates how polluted your town is. It's the average of the pollution of every building."); ?>
 	</div>
 	<div id = "stat_green">
-	    <span class = 'title'><? echo _("Green Areas"); ?></span><hr />
-	    <?php echo _("Show how many 'green' areas you have in your town. This percentage affects the score of your town."); ?>
+	    <span class = 'title'><? echo __("Green Areas"); ?></span><hr />
+	    <?php echo __("Show how many 'green' areas you have in your town. This percentage affects the score of your town."); ?>
 	</div>
 	<div id = "stat_waste">
-	    <span class = 'title'><? echo _("Waste");?></span><hr />
-	    <?php echo _("Indicates the ammount of trash produced by your town. This ammount is deducted from your score."); ?>
+	    <span class = 'title'><? echo __("Waste");?></span><hr />
+	    <?php echo __("Indicates the ammount of trash produced by your town. This ammount is deducted from your score."); ?>
 	    <table id = "stat_summary">
 	        <tr>
-	            <th><?php echo _("Trash produced"); ?></th>
+	            <th><?php echo __("Trash produced"); ?></th>
 	            <td><? echo $town->trashProd ?>t</td>
 	        </tr>
 	        <tr>
-	            <th><?php echo _("Trash disposed"); ?></th>
+	            <th><?php echo __("Trash disposed"); ?></th>
 	            <td><? echo $town->trashRecl ?>t</td>
 	        </tr>
 	    </table>
 	</div>
 	<div id = "stat_water">
-	    <span class = 'title'><? echo _("Water"); ?></span><hr />
-	    <?php echo _("Shows how much water is available."); ?>
+	    <span class = 'title'><? echo __("Water"); ?></span><hr />
+	    <?php echo __("Shows how much water is available."); ?>
     </div>
 	<div id = "stat_energy">
-	    <span class = 'title'><? echo _("Energy"); ?></span><hr />
-	    <?php echo _("Shows how much energy is available. Energy is used by your buildings and you must ensure that you produced it without polluting your town."); ?>
+	    <span class = 'title'><? echo __("Energy"); ?></span><hr />
+	    <?php echo __("Shows how much energy is available. Energy is used by your buildings and you must ensure that you produced it without polluting your town."); ?>
     </div>
 	<div id = "stat_popHouse">
-	    <span class = 'title'><? echo _("Population"); ?></span><hr />
-	    <?php echo _("Shows how many citizens do you have and how many of them have a place to work."); ?>
+	    <span class = 'title'><? echo __("Population"); ?></span><hr />
+	    <?php echo __("Shows how many citizens do you have and how many of them have a place to work."); ?>
 	     <table id = "stat_summary">
 	        <tr>
-	            <th><?php echo _("Inhabitants"); ?></th>
+	            <th><?php echo __("Inhabitants"); ?></th>
 	            <td><span class = 'popHouse'></span></td>
 	        </tr>
 	        <tr>
-	            <th><?php echo _("Workplaces"); ?></th>
+	            <th><?php echo __("Workplaces"); ?></th>
 	            <td><span class = 'popWork'></span></td>
 	        </tr>
 	        <tr>
-	            <th><?php echo _("Unemployment"); ?></th>
+	            <th><?php echo __("Unemployment"); ?></th>
 	            <td><span class = 'unemploy'></span> %</td>
 	        </tr>
 	     </table>
     </div>
 	<div id = "stat_budget">
-	    <span class = 'title'><?php echo _("Budget"); ?></span><hr />
-	    <?php echo _("The financial statistics of your town."); ?>
+	    <span class = 'title'><?php echo __("Budget"); ?></span><hr />
+	    <?php echo __("The financial statistics of your town."); ?>
 	     <table id = "stat_summary">
 	        <tr>
-	            <th><?php echo _("Budget"); ?></th>
+	            <th><?php echo __("Budget"); ?></th>
 	            <td><span class = 'budget'></span> ecos</td>
 	        </tr>
 	        <tr>
-	            <th><?php echo _("Income"); ?></th>
+	            <th><?php echo __("Income"); ?></th>
 	            <td><span class = 'income'></span> ecos/min</td>
 	        </tr>
 	     </table>
     </div>
 	<div id = "stat_goods">
-	    <span class = 'title'><?php echo _("Goods"); ?></span><hr />
-	    <?php echo _("The industrial statistics of your town."); ?>
+	    <span class = 'title'><?php echo __("Goods"); ?></span><hr />
+	    <?php echo __("The industrial statistics of your town."); ?>
 	     <table id = "stat_summary">
 	        <tr>
-	            <th><?php echo _("Goods"); ?></th>
+	            <th><?php echo __("Goods"); ?></th>
 	            <td><span class = 'goods'></span>t</td>
 	        </tr>
 	        <tr>
-	            <th><?php echo _("Production"); ?></th>
+	            <th><?php echo __("Production"); ?></th>
 	            <td><span class = 'prod'></span>t</td>
 	        </tr>
 	        <tr>
-	            <th><?php echo _("Storage"); ?></th>
+	            <th><?php echo __("Storage"); ?></th>
 	            <td><span class = 'store'></span>t</td>
 	        </tr>
 	     </table>

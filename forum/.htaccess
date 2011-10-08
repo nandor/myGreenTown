@@ -1,6 +1,0 @@
-
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^forum.mygreentown.info$ [OR]
-RewriteCond %{HTTP_HOST} ^www.forum.mygreentown.info$
-RewriteRule ^/?$ "http\:\/\/www\.mygreentown\.info\/forum" [R=301,L]
-

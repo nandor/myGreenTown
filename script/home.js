@@ -260,15 +260,15 @@ $(document).ready (function (){
 	$("#toolbar img[alt]").click (function ()
 	{
 		if ($(this).attr ("alt") == "en") {
-            window.location.replace ("/?lang=en");
+            window.location.replace ("?lang=en");
             return;
         }
 		if ($(this).attr ("alt") == "ro") {
-            window.location.replace ("/?lang=ro");
+            window.location.replace ("?lang=ro");
             return;
         }
 		if ($(this).attr ("alt") == "forum") {
-            window.location.replace ("/forum");
+            window.location.replace ("forum");
             return;
 		}
 		if ($(this).attr ("alt") == "ret") {

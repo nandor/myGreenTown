@@ -29,18 +29,6 @@
 		<script type = "text/javascript" language = "javascript" src = "script/lang.js" > </script>
 		<script type = "text/javascript" language = "javascript" src = "script/lib.js" > </script>
 		<script type = "text/javascript" language = "javascript" src = "script/home.js" > </script>
-		<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>		
-		<script type="text/javascript">
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-23914249-1']);
-		  _gaq.push(['_trackPageview']);
-
-		  (function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
-		</script>
 		<script type = "text/javascript">
 			var user = null;
 			<?php
@@ -68,23 +56,19 @@
 		<div id = "toolbar">
 			<span>
 				<img src = 'img/menu_register.png'  alt = 'register.php' />
-				<? echo _('Register'); ?>
+				<? echo __('Register'); ?>
 			</span>
 			<span>
 				<img src = 'img/menu_ranking.png' 	alt = 'ranking.php' />
-				<? echo _('Ranking'); ?>
+				<? echo __('Ranking'); ?>
 			</span>
 			<span>
 				<img src = 'img/menu_docs.png' 		alt = 'doc.php' />
-				<? echo _('Documentation'); ?>
+				<? echo __('Documentation'); ?>
 			</span>
 			<span>
 				<img src = 'img/menu_info.png' 		alt = 'textile.php?page=tutorial.tex' />
-				<? echo _('Tutorial'); ?>
-			</span>
-			<span>
-				<img src = 'img/forum.png' 			alt = 'forum' />
-				<? echo _('Forum'); ?>
+				<? echo __('Tutorial'); ?>
 			</span>
 		    <span class = 'lang'>
 				<img src = 'img/en.png'  alt = 'en' />
@@ -94,7 +78,7 @@
             </span>
 			<span id = "return">
 				<img src = 'img/ret.png' 			alt = 'ret' />
-				<? echo _('Return'); ?>
+				<? echo __('Return'); ?>
 			</span>
 		</div>
 		

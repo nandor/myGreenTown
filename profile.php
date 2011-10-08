@@ -7,22 +7,22 @@
 	@session_start ();
 	
 	if (!($usr = initUser())) {
-		echo _("<h1>You cannot access this page!</h1>"); exit ();
+		echo __("<h1>You cannot access this page!</h1>"); exit ();
 	}
 ?>
 
-<div id = "profile_title"><? echo _("Account management"); ?></div>
+<div id = "profile_title"><? echo __("Account management"); ?></div>
 
 <div id = "profile_sidebar">
-	<div id = "p_user"><? echo _("Change username"); ?></div>
-	<div id = "p_pass"><? echo _("Change password"); ?></div>
-	<div id = "p_addTown"><? echo _("Add town"); ?></div>
-	<div id = "p_delTown"><? echo _("Delete town"); ?></div>
+	<div id = "p_user"><? echo __("Change username"); ?></div>
+	<div id = "p_pass"><? echo __("Change password"); ?></div>
+	<div id = "p_addTown"><? echo __("Add town"); ?></div>
+	<div id = "p_delTown"><? echo __("Delete town"); ?></div>
 </div>
 <div id = "profile_warning">
 </div>
 <div id = "profile_body">
-    <? echo _("Choose an option from the left"); ?>
+    <? echo __("Choose an option from the left"); ?>
 </div>
 <script type = "text/javascript">
 	function profile_warning (warning)
@@ -34,7 +34,7 @@
     function query_finish (res)
     {
         if (res == "ok") {
-			profile_warning ("<? echo _("Success! You'll be logged out in 2 seconds"); ?>");
+			profile_warning ("<? echo __("Success! You'll be logged out in 2 seconds"); ?>");
             setTimeout ("logout_noConfirm ()", 2000);
         } else {
 			profile_warning (res);
@@ -46,7 +46,7 @@
         var newName = $("#newName").val ();
 
         if (newName.length >= 5 || 20 >= newName.length)
-	        return profile_warning ("<? echo _("Username must have between 5 and 20 characters.");?>");
+	        return profile_warning ("<? echo __("Username must have between 5 and 20 characters.");?>");
         
         $.ajax ({
             type: "POST",
@@ -63,10 +63,10 @@
         var pass = $("#oldPassword").val ();
         
         if (newPass != confNewPass)
-            return profile_warning ("<? echo _("Passwords do not match!");?>");
+            return profile_warning ("<? echo __("Passwords do not match!");?>");
            
         if (newPass.length <= 5 || 20 < newPass.length)
-            return profile_warning ("<? echo _("Password is too short!");?>");
+            return profile_warning ("<? echo __("Password is too short!");?>");
              
              
         $.ajax ({
@@ -82,7 +82,7 @@
 	    var newTownName = $("#newTown").val ();
 	    
 	    if (newTownName.length > 20 && newTownName.length >= 5)
-	        return profile_warning ("<? echo _("Town name must have between 6 and 20 characters.");?>");
+	        return profile_warning ("<? echo __("Town name must have between 6 and 20 characters.");?>");
 	    
 	    
 	    $.ajax ({
@@ -95,7 +95,7 @@
     function deleteTown ()
     {
 	    if($("#town_delete").val () == '0') {
-		    profile_warning ("<? echo _("You should choose a town to delete!");?>");
+		    profile_warning ("<? echo __("You should choose a town to delete!");?>");
 		    return 0;
 	    }
 	    
@@ -108,7 +108,7 @@
     }
     $("#p_user").click (function ()
     {
-        $("#profile_body").html ("<? echo _("</div><span class = 'title'>Change Username:</span>\
+        $("#profile_body").html ("<? echo __("</div><span class = 'title'>Change Username:</span>\
 				    <table><tr><td width = '200'>New Username:</td>\
 				    <td><input type='text' id='newName' class='input_big' style = 'width:250px' size='20'/>\
 				    </td></tr><tr><td colspan = '2' style = 'text-align:center'>\
@@ -117,7 +117,7 @@
     
     $("#p_pass").click (function ()
     {   
-        $("#profile_body").html ("<? echo _("</div><span class = 'title'>Change Password:</span>\
+        $("#profile_body").html ("<? echo __("</div><span class = 'title'>Change Password:</span>\
 			        <table>\<tr>\
 			        <td width = '200'>Old password:</td><td><input type='password' id='oldPassword' class='input_big' style = 'width:250px' size='20'/>\
 			        </td></tr><tr><td width = '200'>New Password:</td><td>\
@@ -130,7 +130,7 @@
         
     $("#p_addTown").click (function ()
     {
-        $("#profile_body").html ("<? echo _("<span class = 'title'>Add a Town:</span>\
+        $("#profile_body").html ("<? echo __("<span class = 'title'>Add a Town:</span>\
 				    <table><tr><td width = '200'>New Town Name</td><td>\
 					<input type='text' id='newTown' class='input_big' style = 'width:250px' size='20'/></td>\
 					</tr><tr><td colspan = '2' style = 'text-align:center'>\
@@ -140,8 +140,8 @@
     
     $("#p_delTown").click (function ()
     {
-        $("#profile_body").html ("<span class = 'title'><? echo _("Delete Town:");?></span>\
-				<table style = 'width:100%'><tr><td width = '200'><? echo _("Town to delete:");?></td><td><select id = 'town_delete'>\
+        $("#profile_body").html ("<span class = 'title'><? echo __("Delete Town:");?></span>\
+				<table style = 'width:100%'><tr><td width = '200'><? echo __("Town to delete:");?></td><td><select id = 'town_delete'>\
 				<option value = '0'></option>\
 					<?php
 						foreach ($usr->towns as $town) {
@@ -149,7 +149,7 @@
 						}
 					?>\
 				</select></td></tr><tr><td colspan = '2' style = 'text-align:center'>\
-				<input type = 'button' onclick = 'deleteTown()' value = '<? echo _("Delete Town");?>'/></td></tr></table>").fadeIn ();
+				<input type = 'button' onclick = 'deleteTown()' value = '<? echo __("Delete Town");?>'/></td></tr></table>").fadeIn ();
     });
 
 </script>

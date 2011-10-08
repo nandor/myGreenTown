@@ -14,7 +14,7 @@
 	       
 	        $.getJSON ("getrank.php?pos=" + (itemsPerPage * page) + "&cnt=" + newItemsPerPage, function (json)
 	        {
-	            $("#rank_table").html ('<tr><th style = "width: 60px;"><? echo _("Rank");?></th><th style = "width: 270px;"><? echo _("Name");?></th><th><? echo _("Score");?></th></tr>');
+	            $("#rank_table").html ('<tr><th style = "width: 60px;"><? echo __("Rank");?></th><th style = "width: 270px;"><? echo __("Name");?></th><th><? echo __("Score");?></th></tr>');
 	            for (var i = 0; i < json.length; ++i) {
 	                $("#rank_table").append ("<tr onclick = 'loadTown (" + json[i].id + ")'><td>" + (itemsPerPage * page + i + 1) + "</td><td>" + json[i].name + "</td><td tid = " + json[i].id + ">" + json[i].score + "</td></tr>");					
 	            }
@@ -147,7 +147,7 @@
 	    loadTown (1);
     </script>
 
-    <div id = "rank_title"><?php echo _("Ranking"); ?></div>
+    <div id = "rank_title"><?php echo __("Ranking"); ?></div>
     <div id = "rank_body">
 		<table id = "rank_table">
         </table>

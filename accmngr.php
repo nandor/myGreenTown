@@ -11,22 +11,22 @@
 	        case 'register':
 	        {
 	            if (!isset ($_POST['name'], $_POST['pass'])) {
-	                echo _("Server error"); exit ();
+	                echo __("Server error"); exit ();
 	            }
 	            
 	            if ($_POST['captcha'] != $_SESSION['captcha']) {
-	                echo _("Invalid verification text entered!"); exit ();
+	                echo __("Invalid verification text entered!"); exit ();
 	            }
 	            
 			    $db = mysql_query ("SELECT id FROM user WHERE `name` = '{$_POST['name']}';");
 			    if (mysql_num_rows($db) != 0) {
-			        echo _("Username is already used!"); exit ();
+			        echo __("Username is already used!"); exit ();
 			    }
 			     
 			    $name = trim ($_POST['name']); 
 		
 			    if (!valid_name ($name)) {
-			        echo _("Invalid username!"); exit ();
+			        echo __("Invalid username!"); exit ();
 			    }   
 		
 			    $name = mysql_real_escape_string ($name);
@@ -48,11 +48,11 @@
 		    case 'changeName':
 		    {
 		        if (!isset ($_POST['newName'])) {
-		            echo _("Game error!"); exit ();
+		            echo __("Game error!"); exit ();
 		        }
 		        
 		        if (!($usr = initUser ())) {
-		            echo _("You cannot access this page!");
+		            echo __("You cannot access this page!");
 		        }
 		        
 			    $name = $usr->name;
@@ -60,11 +60,11 @@
 			    $newName = trim ($_POST['newName']); 	
 						
 			    if (!valid_name ($newName)) {
-			        echo _("Invalid username!"); exit ();
+			        echo __("Invalid username!"); exit ();
 			    }   
 			
 			    if (mysql_num_rows(mysql_query ("SELECT * FROM user WHERE name = '$newName';")) > 0) {
-			        echo _("Username is already used!"); exit ();
+			        echo __("Username is already used!"); exit ();
 			    }
 										
 			    mysql_query ("UPDATE user SET `name`= '$newName' WHERE `name` = '$name';");
@@ -81,11 +81,11 @@
 			case 'changePass':
 			{
 			    if (!isset ($_POST['newPass'], $_POST['pass'])) {
-			        echo _("Game error!"); exit ();
+			        echo __("Game error!"); exit ();
 			    }
 			    
 			    if (!($usr = initUser ())) {
-		            echo _("You cannot access this page!");
+		            echo __("You cannot access this page!");
 		        }
 		         
 				$name = $usr->name;
@@ -95,7 +95,7 @@
 				$passNew = mysql_real_Escape_string ($_POST['newPass']);
 								
 				if ($passOld != $pass) {
-				    echo _("Invalid password!"); exit ();
+				    echo __("Invalid password!"); exit ();
 				}
 				
 				mysql_query ("UPDATE user SET `pass`= '$passNew' WHERE `name`= '$name';");
@@ -113,21 +113,21 @@
 			case 'addtown':
 			{
 				if (!isset ($_POST['name'])) {
-				    echo _("Game error!"); exit ();
+				    echo __("Game error!"); exit ();
 				}
 				
 				$newName = mysql_real_escape_string ($_POST['name']);
 				
 				if (!valid_name ($newName, false)) {
-			        echo _("Invalid name!"); exit ();
+			        echo __("Invalid name!"); exit ();
 			    }  
 			    
 				if (!($usr = initUser ())) {
-		            echo _("You cannot access this page!");
+		            echo __("You cannot access this page!");
 		        }
 				
 				if ($usr->numTown > MAXTOWN) {
-				    echo _("You have too many towns!"); exit ();
+				    echo __("You have too many towns!"); exit ();
 				}
 				
 				$newTownID = addTown ($newName);
@@ -139,20 +139,20 @@
 			case 'deleteTown':
 			{
 			    if (!isset ($_POST['town'])) {
-			        echo _("Game error!"); exit ();
+			        echo __("Game error!"); exit ();
 			    }
 			    
 			    if (!($usr = initUser ())) {
-		            echo _("You cannot access this page!");
+		            echo __("You cannot access this page!");
 		        }					
 				$id = intval ($_POST['town']);
 				
 				if (!$usr->hasTown ($id)) {
-				    echo _("You don't own that town!"); exit ();
+				    echo __("You don't own that town!"); exit ();
 				}
 				
 				if ($usr->numTown == 1) {
-					echo _("You can't delete your last town!"); exit ();
+					echo __("You can't delete your last town!"); exit ();
 				}
 				
 				mysql_query("DELETE FROM `town` WHERE `id` = '$id';");
@@ -176,12 +176,12 @@
 			}
 			default:
 			{
-			    echo _("Invalid command!");
+			    echo __("Invalid command!");
 			    break;
 			}
         }
 	} else {
-	    echo _("Server error");
+	    echo __("Server error");
 	}	
 	
 	mysql_close ();

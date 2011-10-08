@@ -10,7 +10,7 @@
 		header ("Location: index.php");
 	}
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>myGreenTown</title>
@@ -60,9 +60,9 @@
 		        </div>
 				<span id = "gameStatus">
 					<span class='gameStatusItem townName'></span>
-					<span tooltip = "<?php echo _("Score "); ?>" ><img src='img/score.png'/><span class='score'></span></span>
-					<span tooltip = "<?php echo _("Budget"); ?>"><img src='img/budget.png'/><span class='budget'></span></span>
-					<span tooltip = "<?php echo _("Goods"); ?>"><img src='img/goods.png'/><span class='goods'> </span></span>
+					<span tooltip = "<?php echo __("Score "); ?>" ><img src='img/score.png'/><span class='score'></span></span>
+					<span tooltip = "<?php echo __("Budget"); ?>"><img src='img/budget.png'/><span class='budget'></span></span>
+					<span tooltip = "<?php echo __("Goods"); ?>"><img src='img/goods.png'/><span class='goods'> </span></span>
 				</span>
 			<div id = "ad">
 			    <?php
@@ -83,15 +83,14 @@
             </div>
 			</div>	
 			<div id = "gameControl">
-				<img alt = 'logout'    tooltip = "<?php echo _("Log out"); ?>"             src = 'img/logout.png'      />
-				<img alt = 'profile'   tooltip = "<?php echo _("Manage your account"); ?>" src = 'img/profile.png'     />
-				<img alt = 'quest'     tooltip = "<?php echo _("View the Task Log"); ?>"   src = 'img/quest.png'       />
-				<!--<img alt = 'doc'       tooltip = "<?php echo _("View documentation"); ?>"  src = 'img/menu_info.png'   />-->
-				<img alt = 'tech'      tooltip = "<?php echo _("Research center"); ?>"     src = 'img/tech.png'        />
-				<img alt = 'stat'      tooltip = "<?php echo _("View the statistics"); ?>" src = 'img/stat.png'        />
-				<img alt = 'pol'       tooltip = "<?php echo _("View the pollution"); ?>"  src = 'img/pol.png'         />
-				<img alt = 'mail'      tooltip = "<?php echo _("View the mail"); ?>"       src = 'img/mail.png'        />
-				<img alt = 'compass'   tooltip = "<?php echo _("Rotate your town"); ?>"    src = 'img/compass0.png'    />
+				<img alt = 'logout'    tooltip = "<?php echo __("Log out"); ?>"             src = 'img/logout.png'      />
+				<img alt = 'profile'   tooltip = "<?php echo __("Manage your account"); ?>" src = 'img/profile.png'     />
+				<img alt = 'quest'     tooltip = "<?php echo __("View the Task Log"); ?>"   src = 'img/quest.png'       />
+				<img alt = 'tech'      tooltip = "<?php echo __("Research center"); ?>"     src = 'img/tech.png'        />
+				<img alt = 'stat'      tooltip = "<?php echo __("View the statistics"); ?>" src = 'img/stat.png'        />
+				<img alt = 'pol'       tooltip = "<?php echo __("View the pollution"); ?>"  src = 'img/pol.png'         />
+				<img alt = 'mail'      tooltip = "<?php echo __("View the mail"); ?>"       src = 'img/mail.png'        />
+				<img alt = 'compass'   tooltip = "<?php echo __("Rotate your town"); ?>"    src = 'img/compass0.png'    />
 			</div>		
 			<div id = "contextMenu">
 				<img alt = "3" src = "img/tile/0_0_0.gif"/>
@@ -131,39 +130,39 @@
 					<div id = "ui_box_ret">
 						<div>
 							<img class = 'ui_box_img' src = 'img/ret.png' alt = '-100'/>
-							<div class = 'ui_box_info'><?php echo _("Return"); ?></div>
+							<div class = 'ui_box_info'><?php echo __("Return"); ?></div>
 						</div>
 					</div>			
 				</div>
 				<div id = 'ui_building'>
 				    <div style = "position:absolute"><img id = "ui_bImg" src = "img/tile/0_0_0.gif"/></div>
-				    <div id = 'ui_bName'><?php echo _("Grassland"); ?></div>
+				    <div id = 'ui_bName'><?php echo __("Grassland"); ?></div>
 				    <div id = 'ui_stats'>
 					    <table>
-						    <tr><th colspan = '2' id = 'ui_stat_title'><?php echo _("Stats"); ?></th></tr><tr>
-							    <td><img src = 'img/pop.png' alt = "<?php echo _("Population"); ?>" /><span id = 'b_pop'></span></td>
-							    <td><img src = 'img/energy.png' alt = "<?php echo _("Energy"); ?>" /><span id = 'b_energy'></span></td>
+						    <tr><th colspan = '2' id = 'ui_stat_title'><?php echo __("Stats"); ?></th></tr><tr>
+							    <td><img src = 'img/pop.png' alt = "<?php echo __("Population"); ?>" /><span id = 'b_pop'></span></td>
+							    <td><img src = 'img/energy.png' alt = "<?php echo __("Energy"); ?>" /><span id = 'b_energy'></span></td>
 						    </tr><tr>
-							    <td><img src = 'img/pol.png' alt = "<?php echo _("Pollution"); ?>" /><span id = 'b_pol'></span></td>
-							    <td><img src = 'img/waste.png' alt = "<?php echo _("Waste"); ?>" /><span id = 'b_waste'></span></td>
+							    <td><img src = 'img/pol.png' alt = "<?php echo __("Pollution"); ?>" /><span id = 'b_pol'></span></td>
+							    <td><img src = 'img/waste.png' alt = "<?php echo __("Waste"); ?>" /><span id = 'b_waste'></span></td>
 						    </tr><tr>
-							    <td><img src = 'img/income.png' alt = "<?php echo _("Income"); ?>" /><span id = 'b_income'></span></td>
-							    <td><img src = 'img/prod.png'  alt = "<?php echo _("Production"); ?>"/><span id = 'b_prod'></span></td>
+							    <td><img src = 'img/income.png' alt = "<?php echo __("Income"); ?>" /><span id = 'b_income'></span></td>
+							    <td><img src = 'img/prod.png'  alt = "<?php echo __("Production"); ?>"/><span id = 'b_prod'></span></td>
 						    </tr><tr>
-							    <td><img src = 'img/water.png' alt = "<?php echo _("Water"); ?>" /><span id = 'b_water'></span></td>
-							    <td><img src = 'img/score.png' alt = "<?php echo _("Score "); ?>" /><span id = 'b_score'></span></td>
+							    <td><img src = 'img/water.png' alt = "<?php echo __("Water"); ?>" /><span id = 'b_water'></span></td>
+							    <td><img src = 'img/score.png' alt = "<?php echo __("Score "); ?>" /><span id = 'b_score'></span></td>
 						    </tr>
 					    </table>
 				    </div>
 				    <div id = 'ui_stats_more'>
 					    <table>
-						    <tr><th colspan = '2'><?php echo _("Requires"); ?></th></tr><tr>
-							    <td><img src = 'img/budget.png' alt = "<?php echo _("Population"); ?>" /><span id = 'b_money'></span></td>
-							    <td><img src = 'img/goods.png' alt = "<?php echo _("Energy"); ?>" /><span id = 'b_goods'></span></td>
+						    <tr><th colspan = '2'><?php echo __("Requires"); ?></th></tr><tr>
+							    <td><img src = 'img/budget.png' alt = "<?php echo __("Population"); ?>" /><span id = 'b_money'></span></td>
+							    <td><img src = 'img/goods.png' alt = "<?php echo __("Energy"); ?>" /><span id = 'b_goods'></span></td>
 						    </tr>
 						    <tr>
 						    	<td colspan = "2">
-						    		<img src = 'img/time.png' alt = "<?php echo _("Build time"); ?>" /><span id = 'b_btime'></span>
+						    		<img src = 'img/time.png' alt = "<?php echo __("Build time"); ?>" /><span id = 'b_btime'></span>
 						    	</td>
 						    </tr>
 					    </table>

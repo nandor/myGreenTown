@@ -6,7 +6,7 @@
 	include 'include/usr.class.php';
 		
 	if (!($usr = initUser())) {
-		echo _("<h1>You cannot access this page!</h1>");
+		echo __("<h1>You cannot access this page!</h1>");
 		exit ();
 	}
 	
@@ -35,7 +35,7 @@
 <div id = 'quest_body'>
 	<div id = 'quest_sidebar'>
 		<div class = 'quest_category'>
-			<span class = 'quest_cat_title'><?php echo _("In progress");?></span>
+			<span class = 'quest_cat_title'><?php echo __("In progress");?></span>
 			<div class = 'quest_container'>
 				<?php
 					foreach ($prog as $id) {
@@ -45,7 +45,7 @@
 			</div>
 		</div>
 		<div class = 'quest_category'>
-			<span class = 'quest_cat_title'><?php echo _("Available");?></span>
+			<span class = 'quest_cat_title'><?php echo __("Available");?></span>
 			<div class = 'quest_container'>
 				<?php
 					foreach ($avail as $id) {
@@ -55,7 +55,7 @@
 			</div>
 		</div>
 		<div class = 'quest_category'>
-			<span class = 'quest_cat_title'><?php echo _("Unavailable");?></span>
+			<span class = 'quest_cat_title'><?php echo __("Unavailable");?></span>
 			<div class = 'quest_container'>
 				<?php
 					foreach ($unavail as $id) {
@@ -65,7 +65,7 @@
 			</div>
 		</div>
 		<div class = 'quest_category'>
-			<span class = 'quest_cat_title'><?php echo _("Completed");?></span>
+			<span class = 'quest_cat_title'><?php echo __("Completed");?></span>
 			<div class = 'quest_container'>
 				<?php
 					foreach ($done as $id) {
@@ -76,11 +76,11 @@
 		</div>
 	</div>
 	<div id = 'quest_titlebar'>
-		<?php echo _("Task Log");?>
+		<?php echo __("Task Log");?>
 	</div>
 	<div id = 'quest_content'>
 		<div id = 'quest_msg'>
-			<?php echo _("Welcome to the task log!");?>
+			<?php echo __("Welcome to the task log!");?>
 		</div>
 	</div>
 </div>

@@ -91,7 +91,7 @@ var tileWidth = 120;
 var tileHeight = 60;
 var maxSize = 20, tileCost = 500;
 var building = new Array ();
-var domain = '/';
+var domain = '/myGreenTown/';
 // Main variables
 var pxWidth = 0, pxHeight = 0, pxLeft = 100, pxTop = 100, townName, sizeX = sizeY = 0;
 var areaWidth, areaHeight;

@@ -1,6 +1,5 @@
 <?php
 
-include 'include/lang.php';
 include 'include/textile.class.php';
 
 function processPage ($page)
@@ -10,7 +9,7 @@ function processPage ($page)
     $handle = @fopen($page, "r");
     
     if ($handle == False) {
-        return _("<center><h1>Error:This item is not documented!</h1></center>");   
+        return __("<center><h1>Error:This item is not documented!</h1></center>");   
     }
     
     $contents = fread($handle, filesize($page));

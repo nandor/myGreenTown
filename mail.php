@@ -6,7 +6,7 @@
 	include 'include/textile.class.php';
 	
 	if (!($usr = initUser())) {
-	    echo _("<h4>You cannot access this page!");
+	    echo __("<h4>You cannot access this page!");
 	    exit (0);
 	}    
 ?>
@@ -23,7 +23,7 @@ $("#mail_toggle").click (function ()
     $("#mail_body").toggle ();
     $("#mail_compose").toggle ();
     
-    $(this).attr ("value", $("#mail_compose").is (":visible") ? "<? echo _("View Mail");?>" : "<? echo _("New mail");?>");
+    $(this).attr ("value", $("#mail_compose").is (":visible") ? "<? echo __("View Mail");?>" : "<? echo __("New mail");?>");
 });
 
 $("#clear").click (function ()
@@ -36,11 +36,11 @@ $("#clear").click (function ()
 $("#send").click (function ()
 {
     if ($("#to").attr ("value") == "") {
-        $("#mail_res").html ("<? echo _("You must enter the recipient!");?>");
+        $("#mail_res").html ("<? echo __("You must enter the recipient!");?>");
         return;
     }
     if ($("#title").attr ("value") == "") {
-        $("#mail_res").html ("<? echo _("You must enter a title!");?>");
+        $("#mail_res").html ("<? echo __("You must enter a title!");?>");
         return;
     }
     $.ajax ({
@@ -55,7 +55,7 @@ $("#send").click (function ()
 });
 </script>
 <div id = "mail_title">
-    <?php echo _("Mail"); ?>
+    <?php echo __("Mail"); ?>
 </div>
 
 <div id = "mail_body">
@@ -64,7 +64,7 @@ $db = mysql_query ("SELECT * FROM mail WHERE `to` = '{$_SESSION['town']}' ORDER 
 
 $textile = new Textile();
 while ($msg = mysql_fetch_array ($db)) {
-    echo "<div class = 'mail'><div class = 'title'>{$msg['title']} <span class = 'from'> "._("from")." {$msg['from']}</span></div><div class = 'date'>{$msg['date']}</div><div class = 'msg'>{$textile->TextileThis ($msg['text'])}</div></div>";
+    echo "<div class = 'mail'><div class = 'title'>{$msg['title']} <span class = 'from'> ".__("from")." {$msg['from']}</span></div><div class = 'date'>{$msg['date']}</div><div class = 'msg'>{$textile->TextileThis ($msg['text'])}</div></div>";
 }
 
 ?>
@@ -72,17 +72,17 @@ while ($msg = mysql_fetch_array ($db)) {
 <div id = "mail_compose">
     <table>
         <tr>
-            <td><? echo _("To");?></td>
+            <td><? echo __("To");?></td>
             <td><input id = "to" type = "text" /></td>
         </tr>
         <tr>
-            <td><? echo _("Title");?></td>
+            <td><? echo __("Title");?></td>
             <td><input id = "title" type = "text" /></td>
         </tr>
         </tr>
             <td colspan = "2">
-                <input type = "button" id = "send" value = "<?php echo _("Send");?>"/>
-                <input type = "button" id = "clear" value = "<?php echo _("Clear");?>"/>
+                <input type = "button" id = "send" value = "<?php echo __("Send");?>"/>
+                <input type = "button" id = "clear" value = "<?php echo __("Clear");?>"/>
                 <span id = "mail_res"></span>
             </td>
         </tr>
@@ -93,5 +93,5 @@ while ($msg = mysql_fetch_array ($db)) {
 </div>
 
 <div id = "mail_options">
-    <input id = "mail_toggle" type = "button" value = "<? echo _("New mail");?>" />
+    <input id = "mail_toggle" type = "button" value = "<? echo __("New mail");?>" />
 </div>

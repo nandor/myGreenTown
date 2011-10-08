@@ -7,18 +7,18 @@
 	@session_start();
 	
 	if (!($usr = initUser ())) {
-		echo _("<h1>You don't have permission to access this page!</h1>");
+		echo __("<h1>You don't have permission to access this page!</h1>");
 		exit ();
 	}
 	
 	$town = $usr->towns[$_SESSION['town']];
 	
 	if ($town->numBld [0x0F] <= 0) {
-		echo _("<h1>You need a research center to research technologies!</h1>");
+		echo __("<h1>You need a research center to research technologies!</h1>");
 		exit ();
 	}
 ?>
-<div id = 'tech_title'><? echo _("Research Center"); ?></div>
+<div id = 'tech_title'><? echo __("Research Center"); ?></div>
 <div id = 'tech_body'>
 	<div id = 'tech_tree_holder'>
 		<?php
@@ -94,10 +94,10 @@ $(".tech_node > span").click (function ()
 	$("#tech_msg").html ($(this).next ().html ()).css ("background-color", "green");
 	
 	if ($(this).attr ("teche") == "1") {
-		$("#tech_msg").append ("<input style = 'left:0px'  type = 'button' value = '<? echo _("Research");?>' onclick = 'research (" + $(this).attr ("tech") + ")' />");
+		$("#tech_msg").append ("<input style = 'left:0px'  type = 'button' value = '<? echo __("Research");?>' onclick = 'research (" + $(this).attr ("tech") + ")' />");
 	}
 	
-	$("#tech_msg").append ("<input style = 'right:0px' type = 'button' value = '<? echo _("Close");?>' onclick = '$(\"#tech_msg\").hide ()' />");
+	$("#tech_msg").append ("<input style = 'right:0px' type = 'button' value = '<? echo __("Close");?>' onclick = '$(\"#tech_msg\").hide ()' />");
 	
 	$("#tech_msg").show ();
 });
