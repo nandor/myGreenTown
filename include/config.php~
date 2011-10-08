@@ -9,8 +9,8 @@
 	        "siteName"  	=> "myGreenTown",
 			"domain"    	=> "www.mygreentown.info",
 			"db_host" 	    => "localhost",
-			"db_user"   	=> "mygreentown",
-			"db_pass"   	=> 'mygreentown',
+			"db_user"   	=> "root",
+			"db_pass"   	=> '@lf@!99$eta',
 			"db_name"   	=> "mygreentown",
 			"cache_expire" 	=> 54000);
 			

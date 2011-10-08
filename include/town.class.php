@@ -284,27 +284,27 @@ class Town {
 		$lvl = $this->bldLvl [$id];
 		
 		if ($lvl == -1) {
-			return _("You can't build this yet!");
+			return __("You can't build this yet!");
 		}
 		$this->update (false);
 		
 		if ($this->map[$x * $this->sizeY + $y] != 0 && $id != 0) {
-			return _("You must demolish first!");
+			return __("You must demolish first!");
 		}
 		
 		$costB = $buildings[$id]->fact[$lvl]['costB'];
 		$costG = $buildings[$id]->fact[$lvl]['costG'];
 				
 		if ($buildings[$id]->limit && $this->numBld[$id] + 1 > $buildings[$id]->limit) {
-		    return _("Build limit reached!");
+		    return __("Build limit reached!");
 		}
 		
 		if ($this->fact['budget'] < $costB) {
-			return _("You don't have enough money!");
+			return __("You don't have enough money!");
 		}
 		
 		if ($this->fact['goods'] < $costG) { 
-			return _("You don't have enough goods!");
+			return __("You don't have enough goods!");
 		}
 		
 		$oldID = $this->map[$x * $this->sizeY + $y];
@@ -312,18 +312,18 @@ class Town {
 			if ($id == 0) {
 			
 				if ($this->fact['energy'] - $buildings[$oldID]->fact[$lvl]['energy'] < 0) {
-					return _("You won't produce enough energy!");
+					return __("You won't produce enough energy!");
 				}
 			
 				if ($this->fact['water'] - $buildings[$oldID]->fact[$lvl]['water'] < 0) {
-					return _("You won't have enough water!");
+					return __("You won't have enough water!");
 				}
 			} else {
 				if ($this->fact['energy'] + $buildings[$id]->fact[$lvl]['energy'] < 0) {
-					return _("You don't produce enough energy!"); 
+					return __("You don't produce enough energy!"); 
 				}
 				if ($this->fact['water'] + $buildings[$id]->fact[$lvl]['water'] < 0) {
-					return _("You don't have enough water!"); 
+					return __("You don't have enough water!"); 
 				}
 			}
 		}
@@ -343,7 +343,7 @@ class Town {
 		}
 		
 		if (!$roadNext && $buildings[$id]->needRoad) {
-			return _("Buildings must be constructed near roads!");
+			return __("Buildings must be constructed near roads!");
 		}
 		
 		$id = (int)$id;
